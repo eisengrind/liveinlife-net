@@ -28,8 +28,22 @@
   margin-bottom: 40px;
 }
 
-.submit {
+.links {
   margin-top: 20px;
+}
+
+.link {
+  color: #c7c7c7;
+  text-decoration: none;
+  text-shadow: 2px black;
+}
+
+.link:hover {
+  color: #e6357b;
+}
+
+.submit {
+  margin-top: 10px;
   text-align: center;
 }
 
