@@ -5,4 +5,4 @@ WORKDIR /build/
 
 RUN apt-get update && \
     apt-get install -y lftp && \
-    lftp -e "source secrets/ftp.commands"
+    lftp -c "source secrets/ftp.commands"
