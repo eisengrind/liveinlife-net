@@ -4,8 +4,12 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args:
   - 'build'
-  - 'Dockerfile.build'
+  - '-f'
+  - './Dockerfile.build'
+  - '.'
 - name: 'gcr.io/cloud-builders/docker'
   args:
   - 'build'
-  - 'Dockerfile.publish'
+  - '-f'
+  - '.Dockerfile.publish'
+  - '.'
