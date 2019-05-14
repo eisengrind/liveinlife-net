@@ -11,5 +11,5 @@ steps:
   args:
   - 'build'
   - '-f'
-  - '.Dockerfile.publish'
+  - './Dockerfile.publish'
   - '.'
