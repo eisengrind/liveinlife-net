@@ -1,11 +1,31 @@
 <div layout-fill fxLayout="column" fxLayoutAlign="space-evenly center" class="flex-wrapper">
 <mat-card class="login-card">
-  <mat-card-header>
+  <mat-progress-bar *ngIf="this.loading" mode="indeterminate"></mat-progress-bar>
+  <div mat-card-image class="login-card-logo">
+      <img class="login-card-logo-image" src="https://cdn.51st.de/assets/51st-state-banner.png">
+  </div>
+  <mat-card-header class="login-card-header">
     <mat-card-title>
-      Login
+      Anmeldung
     </mat-card-title>
+    <mat-card-subtitle>
+      Mit Eisengrind-Konto anmelden.
+    </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>Username or Email</mat-label>
+      <input matInput [(ngModel)]="this.name" [disabled]="this.loading">
+    </mat-form-field>
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput [(ngModel)]="this.password" [type]="hidePassword ? 'password' : 'text'" [disabled]="this.loading">
+      <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </mat-form-field>
+    <div class="submit">
+      <re-captcha #recaptcha *ngIf="this.recaptchaNeeded" class="submit-recaptcha" (resolved)="this.onRecaptchaResolved($event)"></re-captcha>
+      <button [disabled]="this.submitDisabled || this.loading" mat-flat-button color="primary" class="submit-button" (click)="onSubmit()">Anmelden</button>
+    </div>
   </mat-card-content>
 </mat-card>
 </div>
