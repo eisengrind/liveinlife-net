@@ -1,15 +1,14 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args: [ 'kms', 'decrypt', '--ciphertext-file=secrets/ftp.commands.cipher', '--plaintext-file=secrets/ftp.commands', '--location=global', '--keyring=liveinlife-cloud-build', '--key=certificate' ]
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'node:11.14.0-stretch'
+  entrypoint: bash
   args:
-  - 'build'
-  - '-f'
-  - './Dockerfile.build'
-  - '.'
-- name: 'gcr.io/cloud-builders/docker'
-  args:
-  - 'build'
-  - '-f'
-  - './Dockerfile.publish'
-  - '.'
+  - '-c'
+  - |
+    npm install -g @angular/cli
+    npm install --save-prod
+    ng build --prod
+    apt-get update
+    apt-get install -y lftp
+    lftp -c "source secrets/ftp.commands"

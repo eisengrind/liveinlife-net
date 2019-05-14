@@ -1,8 +1,0 @@
-FROM debian:stretch
-
-COPY ./ /build/
-WORKDIR /build/
-
-RUN apt-get update && \
-    apt-get install -y lftp && \
-    lftp -c "source secrets/ftp.commands"
