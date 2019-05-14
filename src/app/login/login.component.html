@@ -24,7 +24,11 @@
     </mat-form-field>
     <div class="submit">
       <re-captcha #recaptcha *ngIf="this.recaptchaNeeded" class="submit-recaptcha" (resolved)="this.onRecaptchaResolved($event)"></re-captcha>
-      <button [disabled]="this.submitDisabled || this.loading" mat-flat-button color="primary" class="submit-button" (click)="onSubmit()">Anmelden</button>
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <a target="_blank" class="link" href="https://eisengrind.de/lost-password/">Passwort vergessen?</a>
+        <a target="_blank" class="link" href="https://eisengrind.de/login/">Registrieren</a>
+        <button [disabled]="this.submitDisabled || this.loading" mat-flat-button color="primary" class="submit-button" (click)="onSubmit()">Anmelden</button>
+      </div>
     </div>
   </mat-card-content>
 </mat-card>

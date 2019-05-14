@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: [ 'kms', 'decrypt', '--ciphertext-file=secrets/ftp.commands.cipher', '--plaintext-file=secrets/ftp.commands', '--location=global', '--keyring=liveinlife-cloud-build', '--key=certificate' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+  - 'build'
+  - './Dockerfile.build'
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+  - 'build'
+  - './Dockerfile.publish'
