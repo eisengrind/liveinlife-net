@@ -1,4 +1,10 @@
 
+.sm-wrapper {
+  background-color: #424242;
+  min-height: 100%;
+  width: 100%;
+}
+
 .login-card {
   padding: 30px;
   width: 400px;
@@ -22,14 +28,36 @@
   width: 100%;
 }
 
-.login-card-header {
+.login-card-header, .sm-header {
   text-align: center;
   display: block;
   margin-bottom: 40px;
 }
 
-.links {
-  margin-top: 20px;
+.sm-card {
+  padding: 20px;
+  color: #fff;
+}
+
+.sm-card-content {
+  padding: 0px 30px 0px 30px;
+}
+
+.sm-header {
+  color: #fff;
+}
+
+.sm-header-subtitle {
+  color: rgba(255,255,255,.7);
+}
+
+.sm-links {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.sm-submit {
+  width: 100% !important;
 }
 
 .link {
