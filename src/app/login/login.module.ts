@@ -15,7 +15,7 @@ import {
 
 import { RecaptchaModule, RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
 import { ApiModule } from '../api';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -44,7 +44,8 @@ const routes: Routes = [
     RecaptchaModule,
     MatIconModule,
     ApiModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     RouterModule
