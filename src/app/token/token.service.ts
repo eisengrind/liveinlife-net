@@ -32,4 +32,12 @@ export class TokenService {
   getRefreshToken(): string {
     return this.refreshToken;
   }
+
+  isLoggedIn(): boolean {
+    if (this.accessToken === '' || this.refreshToken === '') {
+      return false;
+    }
+
+    return true;
+  }
 }
