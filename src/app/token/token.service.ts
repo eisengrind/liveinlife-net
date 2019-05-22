@@ -34,10 +34,6 @@ export class TokenService {
   }
 
   isLoggedIn(): boolean {
-    if (this.accessToken === '' || this.refreshToken === '') {
-      return false;
-    }
-
-    return true;
+    return this.accessToken !== '' && this.refreshToken !== '';
   }
 }
