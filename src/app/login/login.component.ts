@@ -3,6 +3,7 @@ import { AuthService, TokenPair, Problem } from '@51st-state/ng-api-client';
 import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { TokenService } from '../token/token.service';
 import { FormControl, Validators, ValidatorFn, AbstractControl, Validator } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,9 @@ import { FormControl, Validators, ValidatorFn, AbstractControl, Validator } from
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  constructor(private authService: AuthService, private tokenService: TokenService) {}
+  constructor(private authService: AuthService, private tokenService: TokenService, title: Title) {
+    title.setTitle('51st State - Login');
+  }
 
   recaptchaResponse: string;
   hidePassword = true;
