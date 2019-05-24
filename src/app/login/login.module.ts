@@ -14,7 +14,7 @@ import {
 } from '@angular/material';
 
 import { RecaptchaModule, RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
-import { ApiModule } from '../api';
+import { ApiModule } from '@51st-state/ng-api-client';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [

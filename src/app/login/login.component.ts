@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService, TokenPair, Problem } from '../api';
+import { AuthService, TokenPair, Problem } from '@51st-state/ng-api-client';
 import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { TokenService } from '../token/token.service';
 import { FormControl, Validators, ValidatorFn, AbstractControl, Validator } from '@angular/forms';
