@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ApiModule } from './api';
+import { ApiModule } from '@51st-state/ng-api-client';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
