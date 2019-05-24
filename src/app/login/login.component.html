@@ -38,9 +38,16 @@
         </div>
       </div>
     </div>
+    <div class="sm-footer" fxLayout="column" fxLayoutAlign="center center">
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <a class="sm-footer-icon-eisengrind" target="_blank" href="https://eisengrind.de/forum/board/64-51st-state/"></a>
+        <a class="sm-footer-icon-github" target="_blank" href="https://github.com/51st-state"></a>
+      </div>
+      <a class="link mat-body" target="_blank" href="https://eisengrind.de/sc-terms-of-use">Datenschutzbestimmungen</a>
+    </div>
   </div>
 </div>
-<div layout-fill fxLayout="column" fxHide.lt-sm="true" fxLayoutAlign="space-evenly center" class="flex-wrapper">
+<div layout-fill fxLayout="column" fxLayoutAlign="center center" fxHide.lt-sm="true" class="flex-wrapper">
   <mat-card class="login-card">
     <mat-progress-bar *ngIf="this.loading" mode="indeterminate"></mat-progress-bar>
     <div mat-card-image class="login-card-logo">
@@ -82,4 +89,12 @@
       </div>
     </mat-card-content>
   </mat-card>
+  <div class="lt-sm-footer" fxLayout="row" fxLayoutAlign="center center">
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <a class="lt-sm-footer-icon-eisengrind" target="_blank"
+        href="https://eisengrind.de/forum/board/64-51st-state/"></a>
+      <a class="lt-sm-footer-icon-github" target="_blank" href="https://github.com/51st-state"></a>
+    </div>
+    <a class="link mat-body" target="_blank" href="https://eisengrind.de/sc-terms-of-use">Datenschutzbestimmungen</a>
+  </div>
 </div>
